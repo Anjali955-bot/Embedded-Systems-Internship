@@ -1,7 +1,7 @@
 char data;
 
 void setup() {
-  pinMode(7, OUTPUT);
+  pinMode(13, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -11,12 +11,12 @@ void loop() {
     data = Serial.read();
 
     if (data == '1') {
-      digitalWrite(7, HIGH);
+      digitalWrite(13, HIGH);
       Serial.println("Device ON");
     }
 
     else if (data == '0') {
-      digitalWrite(7, LOW);
+      digitalWrite(13, LOW);
       Serial.println("Device OFF");
     }
   }
